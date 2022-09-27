@@ -1,6 +1,6 @@
 __ALX HIGHER LEVEL PROGRAMMING__ PYTHON NETWORK Task
 
-At the end of this project, you are expected to be able to explain to anyone, without any help from google:
+At the end of this project, you are expected to be able to explain to anyone, without any help
 
 * What a URL is
 * What HTTP is
