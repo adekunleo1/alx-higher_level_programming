@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script that displays only the status code of an HTTP request
-curl -s -o /dev/null -w "%{http_code}" "$1"
+# Script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+curl -o /dev/null -sw "%{http_code}" "$1"
