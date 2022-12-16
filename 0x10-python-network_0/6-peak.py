@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Finding a peak in a list of unsorted integers """
+""" Test function find peak """
 
 def find_peak(list_of_integers):
     """Finds a peak in list_of_integers"""
