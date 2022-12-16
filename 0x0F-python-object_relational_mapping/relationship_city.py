@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""
 # Represents a City class.
 # Inherits from SQLAlchemy Base and links to the MySQL table cities.
+"""
 
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
