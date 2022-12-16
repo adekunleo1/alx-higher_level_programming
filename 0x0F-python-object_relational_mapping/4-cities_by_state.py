@@ -1,6 +1,5 @@
-"""
 #!/usr/bin/python3
-# Lists all cities of the hbtn_0e_4_usa database, ordered by city id.
+"""# Lists all cities of the hbtn_0e_4_usa database, ordered by city id.
 # Usage: ./4-cities_by_state.py <mysql username> \
 #                               <mysql password> \
 #                               <database name>
