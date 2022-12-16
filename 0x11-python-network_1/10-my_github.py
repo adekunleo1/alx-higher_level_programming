@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
     Python Script using the GitHub API to display a GitHub ID based on given credentials.
-    Usage: ./10-my_github.py <Github Username> <Github Password>
+    Usage: ./10-my_github.py <Github Username> <Github Password> in this case a personal access token is required.
 """
 
 if __name__ == '__main__':
@@ -9,7 +9,6 @@ if __name__ == '__main__':
     from sys import argv
 
     username = argv[1]
-    # in your case, a personal access token as password
     password = argv[2]
     req = requests.get('https://api.github.com/user',
                        auth=(username, password))
