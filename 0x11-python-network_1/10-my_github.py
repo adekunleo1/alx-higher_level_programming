@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 """
-    Script using the GitHub API to display a GitHub ID based on given credentials.
-    Usage: ./10-my_github.py <GitHub username> <GitHub password>
+    Python Script using the GitHub API to display a GitHub ID based on given credentials.
+    Usage: ./10-my_github.py <Github Username> <Github Password>
 """
-import sys
-import requests
-from requests.auth import HTTPBasicAuth
 
+if __name__ == '__main__':
+    import requests
+    from sys import argv
 
-if __name__ == "__main__":
-    url = 'https://api.github.com/user'
-    payload = {'login': sys.argv[1]}
-    response = requests.get(url, params=payload, auth=(
-        sys.argv[1], sys.argv[2])).json()
-
-    try:
-        print(response['id'])
-    except KeyError:
+    username = argv[1]
+    # in your case, a personal access token as password
+    password = argv[2]
+    req = requests.get('https://api.github.com/user',
+                       auth=(username, password))
+    if req.status_code == 200:
+        print(req.json().get('id'))
+    else:
         print('None')
