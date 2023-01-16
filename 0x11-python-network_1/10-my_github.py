@@ -4,15 +4,11 @@
     Usage: ./10-my_github.py <Github Username> <Github Password> in this case a personal access token is required.
 """
 
-if __name__ == '__main__':
-    import requests
-    from sys import argv
+import sys
+import requests
+from requests.auth import HTTPBasicAuth
 
-    username = argv[1]
-    password = argv[2]
-    req = requests.get('https://api.github.com/user',
-                       auth=(username, password))
-    if req.status_code == 200:
-        print(req.json().get('id'))
-    else:
-        print('None')
+if __name__ == "__main__":
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get("https://api.github.com/user", auth=auth)
+    print(r.json().get("id"))

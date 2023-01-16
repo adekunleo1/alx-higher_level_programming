@@ -13,6 +13,8 @@ if __name__ == "__main__":
     if r.status_code >= 400:
         print('None')
     else:
-        for com in r.json()[:10]:
-            print("{}: {}".format(com.get('sha'),
-                com.get('commit').get('author').get('name')))
+        for commits in r.json()[:10]:
+            print("{}: {}".format(commits.get('sha'),
+                commits.get('commit').get('author').get('name')))
+    except IndexError:
+        pass
